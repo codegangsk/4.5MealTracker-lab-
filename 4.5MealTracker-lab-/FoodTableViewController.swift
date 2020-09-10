@@ -27,12 +27,8 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return meals[0].food.count
-        } else if section == 1 {
-            return meals[1].food.count
-        } else if section == 2{
-            return meals[2].food.count
+        if section >= 0 && section <= 2 {
+            return meals[section].food.count
         } else {
             return 0
         }
@@ -46,5 +42,15 @@ class FoodTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Breakfast"
+        case 1:
+            return "Lunch"
+        case 2:
+            return "Dinner"
+        default:
+            return nil
+        }
     }
 }
