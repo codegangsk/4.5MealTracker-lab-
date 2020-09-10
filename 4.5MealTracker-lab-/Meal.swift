@@ -16,12 +16,4 @@ struct Meal {
         self.name = name
         self.food = food
     }
-    
-    var meals: [Meal]  {
-        let breakfast : [Food] = [Food(name: "Egg In Hell", description: "Tomato soup with an egg on top.")]
-        let lunch : [Food] = [Food(name: "BibimBap", description: "Bowl of rice mixed with various ingredients and chilly pepper sauce.")]
-        let dinner : [Food] = [Food(name: "Ramen", description: "Asian spicy noodle.")]
-        
-        return  [Meal(name: "breakfast", food: breakfast), Meal(name: "lunch", food: lunch), Meal(name: "dinner", food: dinner)]
-    }
 }
